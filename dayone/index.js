@@ -1,23 +1,17 @@
+//! YT part five (Type conversion)
+// let age = window.prompt("How old are you?")
+// age = Number(age);
+// age+=1;
+// console.log(age , typeof age);
 
-//! YT part three (which was Arithmetic Operators)
+let x;
+let y;
+let z;
 
+x = Number(x);
+y = String(y);
+z = Boolean(z);
 
-//! YT part four (Accept user input)
-//?how to accept user input
-
-//? 1.Easy Way = window prompt
-
-// let userName;
-
-// userName = window.prompt("what's your username?");
-
-// console.log(userName);
-
-//? 2.Professional Way = HRML textbox
-
-let userName;
-
-document.getElementById("mySubmit").onclick = function(){
-    userName = document.getElementById("myText").value;
-    document.getElementById("myH1").textContent = `Hello ${userName}`;
-}
+console.log(x , typeof x); // NaN 'number'
+console.log(y , typeof y); // undefined string
+console.log(z , typeof z); // false 'boolean'
