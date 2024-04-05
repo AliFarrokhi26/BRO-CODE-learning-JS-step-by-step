@@ -1,17 +1,17 @@
-//! YT part five (Type conversion)
-// let age = window.prompt("How old are you?")
-// age = Number(age);
-// age+=1;
-// console.log(age , typeof age);
+//! YT part six (constant)
+const PI = 3.14159;
+let radius;
+let circumference;
+// radius = window.prompt("Enter the radius of a circle");
 
-let x;
-let y;
-let z;
+// console.log(circumference);
 
-x = Number(x);
-y = String(y);
-z = Boolean(z);
+document.getElementById("mySubmit").onclick = function(){
+    radius = document.getElementById("myText").value;
+    radius = Number(radius);
+    circumference = 2 * PI * radius;
+    document.getElementById("myH3").textContent = circumference + " cm";
+    // console.log(circumference);
+    
 
-console.log(x , typeof x); // NaN 'number'
-console.log(y , typeof y); // undefined string
-console.log(z , typeof z); // false 'boolean'
+}
