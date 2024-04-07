@@ -1,36 +1,34 @@
-//! YT part 21
-//? NUMBER GUESSING GAME
+//!  YT part 37 (Object) 
+//?  Random password generator 
 
-const minNum = 50;
-const maxNum = 100;
-const answer = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum);
-
-
-
-
-let attempts = 0;
-let guess;
-let running = true;
-
-while (running) {
-    guess = window.prompt(`Guess a number between ${minNum} and ${maxNum}`);
-    guess = Number(guess);
-
-    if (isNaN(guess)) {
-        window.alert("please enter a valid number")
-    } else if (guess > maxNum || guess < minNum) {
-        window.alert("please enter a valid number")
-    } else {
-        attempts++;
-        if (guess > answer) {
-            window.alert("TOO HIGH ! TRY AGAIN")
-        } else if (guess < answer) {
-            window.alert("TOO LOW! TRY AGAIN")
-        } else {
-            window.alert(`CORRECT! THE ANSWER WAS ${answer}. IT TOOK YOU ${attempts} ATEMPTS`);
-            running = false;
-
-        }
-    }
+const person1 = {
+    firstName : "spongebob",
+    lastName : "squarepants",
+    age : 30,
+    isEmployed : true,
+    hello : function(){console.log("Hi ! I'm spongebob");},
+    eat : function(){console.log("I'm eating krabby patty");},
 }
+const person2 = {
+    firstName : "patrick",
+    lastName : "star",
+    age : 42,
+    isEmployed : false,
+    hello : ()=>console.log("Hey ! I'm patrick..."),
+    eat : () => console.log("I'm eating pizza")
+}
+
+console.log(person1.firstName);
+console.log(person1.lastName);
+console.log(person1.age);
+console.log(person1.isEmployed);
+person1.hello();
+person1.eat();
+
+console.log(person2.firstName);
+console.log(person2.lastName);
+console.log(person2.age);
+console.log(person2.isEmployed);
+person2.hello();
+person2.eat();
 
