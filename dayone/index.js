@@ -1,34 +1,16 @@
-//!  YT part 37 (Object) 
-//?  Random password generator 
+//!  YT part 53  
+//?  Digital Clock Program 
 
-const person1 = {
-    firstName : "spongebob",
-    lastName : "squarepants",
-    age : 30,
-    isEmployed : true,
-    hello : function(){console.log("Hi ! I'm spongebob");},
-    eat : function(){console.log("I'm eating krabby patty");},
-}
-const person2 = {
-    firstName : "patrick",
-    lastName : "star",
-    age : 42,
-    isEmployed : false,
-    hello : ()=>console.log("Hey ! I'm patrick..."),
-    eat : () => console.log("I'm eating pizza")
+function updateClock(){
+    const now = new Date();
+    const hour = now.getHours().toString().padStart(2,0);
+    const minute = now.getMinutes().toString().padStart(2,0);
+    const second = now.getSeconds().toString().padStart(2,0);
+    const timeString = `${hour}:${minute}:${second}`;
+    document.getElementById("clock").textContent = timeString;
+
 }
 
-console.log(person1.firstName);
-console.log(person1.lastName);
-console.log(person1.age);
-console.log(person1.isEmployed);
-person1.hello();
-person1.eat();
-
-console.log(person2.firstName);
-console.log(person2.lastName);
-console.log(person2.age);
-console.log(person2.isEmployed);
-person2.hello();
-person2.eat();
-
+updateClock();
+// update clock every second
+setInterval(updateClock,1000);
