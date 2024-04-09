@@ -54,3 +54,6 @@ body {
 .redText{
     color: red;
 }
+#playerWins , #computerWins{
+    font-size: 1.25rem;
+}
