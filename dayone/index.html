@@ -1,5 +1,5 @@
- <!--! YT part 68 -->
- <!--? Rock - Paper - Scissors -->
+ <!--! YT part final -->
+ <!--? WEATHER APP -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,25 +8,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Rock - Paper - Scissors</title>
+    <title>WEATHER APP</title>
 </head>
 
 <body>
    
-   <h1>Rock - Paper - Scissors</h1>
+    <form class="weatherForm">
+        <input type="text" name="" id="" placeholder="Enter city" class="cityInput">
+        <button type="submit">Get Weather</button>
+    </form>
 
-    <div class="choices">
-        <button onclick="playGame('rock')">👊</button>
-        <button onclick="playGame('paper')">✋</button>
-        <button onclick="playGame('scissors')">✌</button>
+    <div class="card" style="display: none;">
+        <!-- <h1 class="cityDisplay">Miami</h1>
+        <p class="tempDisplay">90°c</p>
+        <p class="himumidityDisplay">Humidity : 75%</p>
+        <p class="descDisplay">Clear skies</p>
+        <p class="weatherEmoji">🔆</p>
+        <p class="errorDisplay">please enter a city</p> -->
     </div>
-
-    <div id="playerDisplay">PLAYER :</div>
-    <div id="computerDisplay">COMPUTER :</div>
-    <div id="result"></div>
-    <div id="playerWins"></div>
-    <div id="computerWins"></div>
-
+   
     <script src="index.js"></script>
 
 </body>
